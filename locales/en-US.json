@@ -1,0 +1,7 @@
+{
+  "application": {
+    "name": "Demo App"
+  },
+  "hello": "Hello, {name}!",
+  "language": "Language"
+}
