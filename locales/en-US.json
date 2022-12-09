@@ -3,5 +3,10 @@
     "name": "Demo App"
   },
   "hello": "Hello, {name}!",
-  "language": "Language"
+  "language": "Language",
+  "dashboard": "Dashboard",
+  "car": {
+    "carECU": "Car ECU",
+    "carData": "Car Data"
+  }
 }

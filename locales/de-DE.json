@@ -3,5 +3,11 @@
     "name": "Demo App"
   },
   "hello": "Hallo, {name}!",
-  "language": "Sprache"
+  "language": "Sprache",
+  "dashboard": "Armaturenbrett",
+  "car": {
+    "carECU": "Auto ECU",
+    "carData": "Auto Data"
+  }
+  
 }
