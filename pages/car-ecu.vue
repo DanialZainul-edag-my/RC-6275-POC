@@ -60,6 +60,60 @@ const logToObject = () => console.log(toObject())
  */
 const resetTransform = () => setTransform({ x: 0, y: 0, zoom: 1 })
 
+onMounted(() => {
+	assignClassToNode();
+	assignClassToEdges();
+})
+
+function assignClassToNode() {
+	const nodes = elements.value.filter(x => x.label)
+	nodes?.forEach((el) => {
+		let nodeClass = 'nodes '
+		let nodeLabel = el.label?.toLowerCase()
+
+		switch (true) {
+			case nodeLabel.includes('canfd'):
+				nodeClass += 'bg-canfd';
+				break;
+			case nodeLabel.includes('ethernet'):
+				nodeClass += 'bg-ethernet'
+				break;
+			case nodeLabel.includes('lin'):
+				nodeClass += 'bg-lin'
+				break;
+			case nodeLabel.includes('pt'):
+				nodeClass += 'bg-pt'
+				break;
+			case nodeLabel.includes('hcp'):
+				nodeClass += 'bg-hcp'
+				break;
+			case nodeLabel.includes('pm'):
+				nodeClass += 'bg-pm'
+				break;
+		}
+		return el.class = nodeClass
+	})
+}
+
+function assignClassToEdges() {
+	const edges = elements.value.filter(x => x.source && x.target)
+	edges?.forEach((ed) => {
+		switch (ed.status) {
+			case 'ok':
+				ed.style = { stroke: 'green' }
+				break;
+			case 'warning':
+				ed.style = { stroke: 'yellow' }
+				break;
+			case 'error':
+				ed.style = { stroke: 'red' }
+				break;
+			default:
+				ed.style = { stroke: 'red' }
+		}
+	})
+}
+
 </script>
 
 <template>
