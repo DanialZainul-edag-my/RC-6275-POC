@@ -121,7 +121,7 @@ function assignClassToEdges() {
 		<h1>{{ $t('car.carECU') }}</h1>
 	</div>
 
-	<div class="container" style="width: 1000px; height: 500px;">
+	<div class="flow-container">
 		<VueFlow
 			v-model="elements" 
 			class="basicflow"
@@ -133,9 +133,20 @@ function assignClassToEdges() {
 </template>
 
 <style>
-	.basicflow { background-color: rgb(229, 253, 248); }
+	.flow-container {
+		width: 1000px;
+		height: 500px;
+		background-image: url('../assets/Audi_A8_top.png');
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: contain; /* Resize the background image */
+		border: 1px solid lightgrey;
+		border-radius: 8px;
+	}
 
-	.nodes { color: #fff; text-align: center; border: 2px solid black }
+	.vue-flow__edge-path { stroke-width: 3px } /* Sets the thickness of the edges/line connections */
+
+	.nodes { color: #fff; text-align: center; border: 2px solid black; font-size: 14px; }
 	.bg-canfd { background-color: darkblue;  width: 80px; }
 	.bg-ethernet { background-color: green; width: 100px; }
 	.bg-lin { background-color: darkmagenta; width: 50px; }
