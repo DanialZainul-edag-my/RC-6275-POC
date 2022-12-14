@@ -35,13 +35,10 @@ const toggleDrawer = () => {
 
 <template>
   <v-app :theme="theme">
-    <v-app-bar
-      :title="$t('application.name')"
-      color="primary"
-      @click="$router.push('/')"
-    >
+    <v-app-bar color="primary">
       <template #prepend>
         <v-app-bar-nav-icon @click.stop="toggleDrawer"></v-app-bar-nav-icon>
+        <span class="v-toolbar-title" @click="$router.push('/')">{{ $t('application.name') }}</span>
       </template>
 
       <div class="d-flex flex-row mx-2">
