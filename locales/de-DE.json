@@ -5,6 +5,16 @@
   "hello": "Hallo, {name}!",
   "language": "Sprache",
   "dashboard": "Armaturenbrett",
+  "general": {
+    "no": "Nr",
+    "connections": "Verbindungen",
+    "connectionID": "Verbindungs-ID",
+    "noConnectionAvailable": "Keine Verbindungen verfügbar",
+    "status": "Status",
+    "ok": "Ok",
+    "warning": "Warnung",
+    "error": "Fehler"
+  },
   "car": {
     "carECU": "Auto ECU",
     "carData": "Auto Data"

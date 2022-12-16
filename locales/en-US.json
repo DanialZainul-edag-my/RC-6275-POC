@@ -5,6 +5,16 @@
   "hello": "Hello, {name}!",
   "language": "Language",
   "dashboard": "Dashboard",
+  "general": {
+    "no": "No",
+    "connections": "Connections",
+    "connectionID": "Connection ID",
+    "noConnectionAvailable": "No connections available",
+    "status": "Status",
+    "ok": "Ok",
+    "warning": "Warning",
+    "error": "Error"
+  },
   "car": {
     "carECU": "Car ECU",
     "carData": "Car Data"

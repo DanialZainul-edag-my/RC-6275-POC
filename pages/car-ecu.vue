@@ -19,6 +19,9 @@ const { onPaneReady, onNodeDragStop, onConnect, addEdges, setTransform, toObject
  */
 const elements = ref(initialElements)
 
+const selectedNode = ref({})
+const showNodeDialog = ref(false)
+
 /**
  * This is a Vue Flow event-hook which can be listened to from anywhere you call the composable, instead of only on the main component
  *
@@ -114,6 +117,14 @@ function assignClassToEdges() {
 	})
 }
 
+const onClickNode = (node) => {
+	showNodeDialog.value = !showNodeDialog.value;	
+	selectedNode.value = node.node
+
+	if (node.connectedEdges.length > 0) {
+		selectedNode.value.connectedEdges = [ ...node.connectedEdges ]
+	}
+}
 </script>
 
 <template>
@@ -130,6 +141,52 @@ function assignClassToEdges() {
 		>
 		</VueFlow>
 	</div>
+
+	<!-- popup on click node (ECU / bus system) -->
+	<v-dialog
+		v-model="showNodeDialog"
+		width="500"
+	>
+		<v-card class="pa-4">
+			<div class="d-flex justify-space-between align-center">
+				<v-card-title class="font-weight-bold">{{ selectedNode.label }}</v-card-title>
+				<v-btn 
+					icon="mdi-close" 
+					variant="text"
+					@click="showNodeDialog = !showNodeDialog"
+				></v-btn>
+			</div>
+			
+			<template v-if="selectedNode.connectedEdges">
+				<span class="px-4 py-2">{{ $t('general.connections') }}:</span>
+				<v-table>
+					<thead>
+						<tr>
+							<th class="text-left">{{ $t('general.no') }}</th>
+							<th class="text-left">{{ $t('general.connectionID') }}</th>
+							<th class="text-left">{{ $t('general.status') }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr
+							v-for="(edge, index) in selectedNode.connectedEdges"
+							:key="edge.id"
+						>
+							<td>{{ index + 1 }}</td>
+							<td>{{ edge.id }}</td>
+							<td
+								class="text-capitalize"
+								:class="edge.status === 'ok' ? 'text-green' : edge.status === 'warning' ? 'text-orange' : 'text-red'"
+							>{{ edge.status }}</td>
+						</tr>
+					</tbody>
+				</v-table>
+			</template>
+			<template v-else>
+				<span class="px-4 py-2">{{ $t('general.noConnectionAvailable') }}:</span>
+			</template>
+		</v-card>
+	</v-dialog>
 </template>
 
 <style>
