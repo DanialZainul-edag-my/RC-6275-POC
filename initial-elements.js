@@ -14,29 +14,29 @@ export const initialElements = [
     position: { x: 0, y: 0 },
     sourcePosition: Position.Left,
   },
-  { id: '11', label: 'Zelda CANFD 4', position: { x: 100, y: 0 } },
-  { id: '12', label: 'Zelda CANFD 5', position: { x: 200, y: 0 } },
-  { id: '13', label: 'Zelda CANFD 6', position: { x: 300, y: 0 } },
-  { id: '14', label: 'Zelda CANFD 3', position: { x: 800, y: 212 }, targetPosition: Position.Left, },
-  { id: '15', label: 'Zelda CANFD 7', position: { x: 900, y: 212 } },
+  { id: '11', label: 'Zelda CANFD 4', position: { x: 85, y: 0 } },
+  { id: '12', label: 'Zelda CANFD 5', position: { x: 170, y: 0 } },
+  { id: '13', label: 'Zelda CANFD 6', position: { x: 255, y: 0 } },
+  { id: '14', label: 'Zelda CANFD 3', position: { x: 750, y: 175 }, targetPosition: Position.Left, },
+  { id: '15', label: 'Zelda CANFD 7', position: { x: 835, y: 175 } },
 
-  { id: '20', label: 'Zelda LIN 2', position: { x: 800, y: 272 }, targetPosition: Position.Left, },
-  { id: '21', label: 'Zelda LIN 3', position: { x: 875, y: 272 } },
-  { id: '22', label: 'Zelda LIN 4', position: { x: 950, y: 272 } },
+  { id: '20', label: 'Zelda LIN 2', position: { x: 750, y: 230 }, targetPosition: Position.Left, },
+  { id: '21', label: 'Zelda LIN 3', position: { x: 805, y: 230 } },
+  { id: '22', label: 'Zelda LIN 4', position: { x: 860, y: 230 } },
 
-  { id: '50', label: 'HCP1', position: { x: 150, y: 252 } },
-  { id: '51', label: 'HCP3', position: { x: 90, y: 212 } },
-  { id: '52', label: 'HCP4', position: { x: 150, y: 212 } },
-  { id: '53', label: 'HCP5', position: { x: 300, y: 252 } },
+  { id: '50', label: 'HCP1', position: { x: 150, y: 215 } },
+  { id: '51', label: 'HCP3', position: { x: 90, y: 175 } },
+  { id: '52', label: 'HCP4', position: { x: 150, y: 175 } },
+  { id: '53', label: 'HCP5', position: { x: 350, y: 215 } },
   
-  { id: '30', label: 'PT-15 1', position: { x: 800, y: 332 }, targetPosition: Position.Left, },
-  { id: '31', label: 'PT-15 2', position: { x: 875, y: 332 } },
-  { id: '32', label: 'PT-20', position: { x: 800, y: 392 }, targetPosition: Position.Left, },
+  { id: '30', label: 'PT-15 1', position: { x: 750, y: 285 }, targetPosition: Position.Left, },
+  { id: '31', label: 'PT-15 2', position: { x: 805, y: 285 } },
+  { id: '32', label: 'PT-20', position: { x: 750, y: 345 }, targetPosition: Position.Left, },
 
-  { id: '40', label: 'Ethernet Switch', position: { x: 100, y: 100 }, targetPosition: Position.Left, sourcePosition: Position.Right, },
-  { id: '41', label: 'Ethernet Switch', position: { x: 600, y: 100 }, targetPosition: Position.Left, sourcePosition: Position.Bottom, },
+  { id: '40', label: 'Ethernet Switch', position: { x: 100, y: 75 }, targetPosition: Position.Left, sourcePosition: Position.Right, },
+  { id: '41', label: 'Ethernet Switch', position: { x: 600, y: 75 }, targetPosition: Position.Left, sourcePosition: Position.Bottom, },
 
-  { id: '90', label: 'PM200', position: { x: 800, y: 104 }, targetPosition: Position.Left },
+  { id: '90', label: 'PM200', position: { x: 750, y: 75 }, targetPosition: Position.Left },
 
   // Edges / Connections
   {

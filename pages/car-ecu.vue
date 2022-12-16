@@ -3,8 +3,6 @@
 import { VueFlow, isNode, useVueFlow } from '@vue-flow/core'
 /* import the required styles */
 import "@vue-flow/core/dist/style.css";
-/* import the default theme (optional) */
-// import "@vue-flow/core/dist/theme-default.css";
 import { ref } from 'vue'
 import { initialElements } from '../initial-elements'
 
@@ -208,10 +206,10 @@ const onClickNode = (node) => {
 	.vue-flow__edge-path { stroke-width: 3px } /* Sets the thickness of the edges/line connections */
 
 	.nodes { color: #fff; text-align: center; border: 2px solid black; font-size: 14px; }
-	.bg-canfd { background-color: darkblue;  width: 80px; }
-	.bg-ethernet { background-color: green; width: 100px; }
-	.bg-lin { background-color: darkmagenta; width: 50px; }
-	.bg-pt { background-color: lightskyblue; width: 50px; }
-	.bg-hcp { background-color: rgb(0, 119, 255); width: 55px; padding: 4px; }
-	.bg-pm { background-color: red; padding: 8px; }
+	.bg-canfd { background-color: rgb(0,32,99);  width: 80px; }
+	.bg-ethernet { background-color: rgb(0,152,79); width: 100px; }
+	.bg-lin { background-color: rgb(115,61,166); width: 50px; }
+	.bg-pt { background-color: rgb(0,162,245); width: 50px; }
+	.bg-hcp { background-color: rgb(0,105,200); width: 55px; padding: 4px; }
+	.bg-pm { background-color: rgb(207,28,47); padding: 8px; }
 </style>
