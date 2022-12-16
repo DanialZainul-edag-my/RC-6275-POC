@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
 
 const theme = ref('light')
 const { t } = useI18n({ useScope: 'global' })
@@ -38,7 +38,7 @@ const toggleDrawer = () => {
     <v-app-bar color="primary">
       <template #prepend>
         <v-app-bar-nav-icon @click.stop="toggleDrawer"></v-app-bar-nav-icon>
-        <span class="v-toolbar-title" @click="$router.push('/')">{{ $t('application.name') }}</span>
+        <span class="v-toolbar-title cursor-pointer" @click="$router.push('/')">{{ $t('application.name') }}</span>
       </template>
 
       <div class="d-flex flex-row mx-2">

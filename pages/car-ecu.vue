@@ -27,8 +27,8 @@ const showNodeDialog = ref(false)
  *
  * onPaneReady is called when viewpane & nodes have visible dimensions
  */
-onPaneReady(({ fitView }) => {
-  fitView()
+onPaneReady(() => {
+	setTransform({ x: 220, y: 110, zoom: 0.75 })
 })
 
 onNodeDragStop((e) => console.log('drag stop', e))
@@ -106,7 +106,7 @@ function assignClassToEdges() {
 				ed.style = { stroke: 'green' }
 				break;
 			case 'warning':
-				ed.style = { stroke: 'yellow' }
+				ed.style = { stroke: 'orange' }
 				break;
 			case 'error':
 				ed.style = { stroke: 'red' }
@@ -136,8 +136,12 @@ const onClickNode = (node) => {
 		<VueFlow
 			v-model="elements" 
 			class="basicflow"
-			:fit-view-on-init="true"
 			:snap-to-grid="true"
+			:nodes-draggable="false"
+			:zoom-on-scroll="false"
+			zoom-activation-key-code="ctrl"
+			:pan-on-drag="false"
+			@node-click="onClickNode"
 		>
 		</VueFlow>
 	</div>
