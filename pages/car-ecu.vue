@@ -136,7 +136,7 @@ function assignClassToEdges() {
 	.flow-container {
 		width: 1000px;
 		height: 500px;
-		background-image: url('../assets/Audi_A8_top.png');
+		background-image: url('../assets/images/Audi_A8_top.png');
 		background-position: center; /* Center the image */
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: contain; /* Resize the background image */
