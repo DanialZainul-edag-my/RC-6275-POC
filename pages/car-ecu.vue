@@ -19,6 +19,8 @@ const elements = ref(initialElements)
 
 const selectedNode = ref({})
 const showNodeDialog = ref(false)
+const selectedEdge = ref({})
+const showEdgeDialog = ref(false)
 
 /**
  * This is a Vue Flow event-hook which can be listened to from anywhere you call the composable, instead of only on the main component
@@ -123,6 +125,10 @@ const onClickNode = (node) => {
 		selectedNode.value.connectedEdges = [ ...node.connectedEdges ]
 	}
 }
+const onClickEdge = (edge) => {
+	showEdgeDialog.value = !showEdgeDialog.value;	
+	selectedEdge.value = edge.edge
+}
 </script>
 
 <template>
@@ -140,6 +146,7 @@ const onClickNode = (node) => {
 			zoom-activation-key-code="ctrl"
 			:pan-on-drag="false"
 			@node-click="onClickNode"
+			@edge-click="onClickEdge"
 		>
 		</VueFlow>
 	</div>
@@ -185,8 +192,45 @@ const onClickNode = (node) => {
 				</v-table>
 			</template>
 			<template v-else>
-				<span class="px-4 py-2">{{ $t('general.noConnectionAvailable') }}:</span>
+				<span class="px-4 py-2">{{ $t('general.noConnectionAvailable') }}</span>
 			</template>
+		</v-card>
+	</v-dialog>
+
+	<!-- popup on click edge (connection lines) -->
+	<v-dialog
+		v-model="showEdgeDialog"
+		width="500"
+	>
+		<v-card class="pa-4">
+			<div class="d-flex justify-space-between align-center">
+				<v-card-title class="font-weight-bold">{{ selectedEdge.id }}</v-card-title>
+				<v-btn 
+					icon="mdi-close" 
+					variant="text"
+					@click="showEdgeDialog = !showEdgeDialog"
+				></v-btn>
+			</div>
+			
+			<v-table>
+				<thead>
+					<tr>
+						<th class="text-left">{{ $t('general.sourceNode') }} ({{ $t('general.id') }})</th>
+						<th class="text-left">{{ $t('general.targetNode') }} ({{ $t('general.id') }})</th>
+						<th class="text-left">{{ $t('general.status') }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{ selectedEdge.sourceNode.label }} ({{ selectedEdge.sourceNode.id }})</td>
+						<td>{{ selectedEdge.targetNode.label }} ({{ selectedEdge.targetNode.id }})</td>
+						<td
+							class="text-capitalize"
+							:class="selectedEdge.status === 'ok' ? 'text-green' : selectedEdge.status === 'warning' ? 'text-orange' : 'text-red'"
+						>{{ selectedEdge.status }}</td>
+					</tr>
+				</tbody>
+			</v-table>
 		</v-card>
 	</v-dialog>
 </template>

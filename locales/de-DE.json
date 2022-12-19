@@ -6,14 +6,18 @@
   "language": "Sprache",
   "dashboard": "Armaturenbrett",
   "general": {
+    "id": "ID",
     "no": "Nr",
+    "nodes": "Knoten",
     "connections": "Verbindungen",
     "connectionID": "Verbindungs-ID",
     "noConnectionAvailable": "Keine Verbindungen verfügbar",
     "status": "Status",
     "ok": "Ok",
     "warning": "Warnung",
-    "error": "Fehler"
+    "error": "Fehler",
+    "sourceNode": "Quellknoten",
+    "targetNode": "Zielknoten"
   },
   "car": {
     "carECU": "Auto ECU",

@@ -6,14 +6,18 @@
   "language": "Language",
   "dashboard": "Dashboard",
   "general": {
+    "id": "ID",
     "no": "No",
+    "nodes": "Nodes",
     "connections": "Connections",
     "connectionID": "Connection ID",
     "noConnectionAvailable": "No connections available",
     "status": "Status",
     "ok": "Ok",
     "warning": "Warning",
-    "error": "Error"
+    "error": "Error",
+    "sourceNode": "Source Node",
+    "targetNode": "Target Node"
   },
   "car": {
     "carECU": "Car ECU",
