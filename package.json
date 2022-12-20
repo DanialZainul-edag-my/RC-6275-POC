@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
-    "@vue-flow/core": "^1.5.5"
+    "@vue-flow/core": "^1.5.5",
+    "chart.js": "^4.1.1"
   }
 }
