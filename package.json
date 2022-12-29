@@ -28,6 +28,8 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "@vue-flow/core": "^1.5.5",
-    "chart.js": "^4.1.1"
+    "apexcharts": "^3.36.3",
+    "vue3-apexcharts": "^1.4.1",
+    "dayjs": "^1.11.7"
   }
 }
