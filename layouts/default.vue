@@ -18,9 +18,9 @@ const drawerItems = ref(
       'url': '/car-ecu'
     },
     {
-      'title': t('car.carData'),
+      'title': t('car.carTimeline'),
       'icon': 'mdi-chart-line-variant',
-      'url': '/car-data'
+      'url': '/car-timeline'
     }
   ]
 )

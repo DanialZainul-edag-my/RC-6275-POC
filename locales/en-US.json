@@ -17,10 +17,18 @@
     "warning": "Warning",
     "error": "Error",
     "sourceNode": "Source Node",
-    "targetNode": "Target Node"
+    "targetNode": "Target Node",
+    "start": "Start",
+    "end": "End",
+    "uploadedOn": "Uploaded on"
   },
   "car": {
     "carECU": "Car ECU",
-    "carData": "Car Data"
+    "carTimeline": "Car Timeline",
+    "carData": "Car Data",
+    "traces": "Traces",
+    "errorMemory": "Error Memory",
+    "errorMemories": "Error Memories",
+    "metadata": "Metadata"
   }
 }

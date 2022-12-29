@@ -17,11 +17,19 @@
     "warning": "Warnung",
     "error": "Fehler",
     "sourceNode": "Quellknoten",
-    "targetNode": "Zielknoten"
+    "targetNode": "Zielknoten",
+    "start": "Starten",
+    "end": "Ende",
+    "uploadedOn": "Hochgeladen auf"
   },
   "car": {
     "carECU": "Auto ECU",
-    "carData": "Auto Data"
+    "carTimeline": "Auto Zeitleiste",
+    "carData": "Auto Data",
+    "traces": "Traces",
+    "errorMemory": "Fehlerspeicher",
+    "errorMemories": "Fehlererinnerungen",
+    "metadata": "Metadata"
   }
   
 }
